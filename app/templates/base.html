@@ -7,11 +7,20 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <title>Ceneo.pl web scraper</title>
 </head>
-<body class="w-100 h-100">
+<body class="w-100 h-100 bg-primary-subtle">
     <header class="text-light bg-info g-col-6 px-auto text-break lh-lg text-center pb-1 border-bottom border-dark">
         <h1 class="mb-0">Ceneo.pl web scraper</h1>
     </header>
-    <section class="ms-auto h-100 text-light bg-primary g-col-6 px-auto text-break lh-lg text-center">
+    <nav class="w-25 h-100 d-inline p-2 bg-primary-subtle position-fixed g-col-6 overflow-auto">
+        <h2>Spis treści</h2>
+        <ul class="list-group h-auto">
+            <li><a class="list-group-item  list-group-item-action list-group-item-primary" href="{{url_for('index')}}">index</a></li>
+            <li><a class="list-group-item  list-group-item-action list-group-item-primary" href="{{url_for('author')}}">author</a></li>
+            <li><a class="list-group-item  list-group-item-action list-group-item-primary" href="{{url_for('extract')}}">extract</a></li>
+            <li><a class="list-group-item  list-group-item-action list-group-item-primary" href="{{url_for('products')}}">products</a></li>
+        </ul>
+    </nav>
+    <section class="ms-auto w-75 h-100 text-light bg-primary g-col-6 px-auto text-break lh-lg text-center">
         {% block content %}
             <p>To jest plik baza</p>
         {% endblock %}

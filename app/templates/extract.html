@@ -1,4 +1,28 @@
 {% extends "base.html" %}
 {% block content %}
-
+<h2>Ekstrakcja opinii</h2>
+<form action="" method="POST" class="container">
+    <div class="row g-3 align-items-center ml-0 mr-auto">
+        <div class="col-auto">
+            <label for="product id" class="sr-only">Kod produktu</label>
+        </div>
+        <div class="col-auto">
+            <input type="text" required class="form-control" aria-describedby="product_idHelpInLine" name="product_id" id="product_id" placeholder="podaj kod produktu">
+        </div>
+        <div class="col-auto">
+            <span id="product_idHelpInLine" class="form-text">
+                kod produktu musi zawierac 8-10 cyfr.
+            </span>
+        </div>
+        <div class="col-auto">
+            <button type="submit" class="btn btn-waring">pobierz opinie</button>
+        </div>
+    </div>
+</form>
+{% if error is defined %}
+        <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            <strong>Uwaga !</strong> {{error}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert"  aria-label="Close"></button>
+        </div>
+{% endif %}
 {% endblock %}
