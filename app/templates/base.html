@@ -21,6 +21,10 @@
         </ul>
     </nav>
     <section class="ms-auto w-75 h-100 text-light bg-primary g-col-6 px-auto text-break lh-lg text-center">
+        <h2 class="text-center mt-3 mb-3">
+        {% block title %}
+        {% endblock %}
+        </h2>
         {% block content %}
             <p>To jest plik baza</p>
         {% endblock %}
